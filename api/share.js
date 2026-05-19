@@ -7,6 +7,7 @@ export default function handler(req, res) {
     const playStoreUrl = 'https://play.google.com/store/apps/details?id=ai.trymiles.app&hl=en_IN';
     const storeUrl = isAndroid ? playStoreUrl : appStoreUrl;
 
+
     // Android intent URL includes a native fallback to Play Store for Chrome
     const appUrl = isAndroid
         ? `intent://itinerary/${id}#Intent;scheme=wandr;package=com.remoteboys.wandr.wandr;S.browser_fallback_url=${encodeURIComponent(playStoreUrl)};end`
